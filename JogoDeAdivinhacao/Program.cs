@@ -9,10 +9,9 @@ using System.Security.Cryptography;
 
 int numeroaleatorio = RandomNumberGenerator.GetInt32(1, 21);
 
-bool deveContinuar = true;
-while (deveContinuar == true)
+while (true==true)
 {
-    Console.Clear();
+    //Console.Clear();
 
     Console.WriteLine("----------------------------");
     Console.WriteLine("JogoDeAdivinhação");
@@ -43,11 +42,11 @@ while (deveContinuar == true)
     }
 
     Console.Write("Deseja continuar? (s/n: ");
-    string? opcaoContinuar = Console.ReadLine();
+    string? opcaoContinuar = Console.ReadLine(); //(?) nullable
 
-    if (opcaoContinuar != "s")
+    if (opcaoContinuar?.ToUpper() != "S")
     {
-        deveContinuar = false;
+        break;
     }
 
     Console.ReadLine();
